@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create a Form and Validate the contents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box" >
+    <div align="center" >
+        <h3>Seminar Registeration</h3>
+    </div>
+        <form action="welcome.html" id="registerForm" >
+            <label for="name">Student Name</label>
+            <input type="text" name="name" id="name" />
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+            <label for="clgName">College Name</label>
+            <input type="text" name="clgName" id="clgName" />
+            <label for="mobileNo">Mobile Number</label>
+            <input type="text" name="mobileNo" id="mobileNo" />
+            <div class="gender">
+                <label for="">Gender</label> <br/> <br />
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="others" value="others" />
+                <label for="others">others</label>
+            </div>
+            <div align="center" >
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
