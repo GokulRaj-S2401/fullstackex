@@ -19,11 +19,11 @@ document.getElementById('registerForm').addEventListener('submit',(e)=>{
         error.push("Invalid college name");
     }
 
-    if(mbleNo.length != 10){
+    if(mbleNo.length != 10 || !mbleNo.match((/^[0-9]+$/)) ){
         error.push("Invalid Phone Number");
     }
 
-    // const g = gender.filter((element)=>element.checked)
+
     for(let i=0;i<gender.length;i++){
         if(gender[i].checked){
            genderValue = true
@@ -38,8 +38,5 @@ document.getElementById('registerForm').addEventListener('submit',(e)=>{
         e.preventDefault()
         alert(error.map((data)=>`\n ${data}`))
     }
-
-
-    
 
 });
