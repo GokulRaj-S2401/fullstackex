@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{#each data}}
+    <form action="/update/{{this.rollno}}" method="post"  >
+        <p> Roll No</p>
+        <input type="text" value="{{this.rollno}}" disabled name="rollno" required>
+        <p>Name</p>
+        <input type="text" name="name" value="{{this.name}}" required>
+        <p>DOB</p>
+        <input type="date" name="dob" value="{{this.dob}}" required>
+        <p>Email</p>
+        <input  type="email" value="{{this.email}}" name="email" required>
+        <input type="submit" value="submit">
+    </form>
+    {{/each}}
+</body>
+</html>

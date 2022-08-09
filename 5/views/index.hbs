@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 80%;
+            margin: 10px 10% auto;
+        }
+        table,tr{
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Student Details</h1>
+    </center>
+    <div align="right" > <a href="/add">New Record</a> </div>
+    <table width="100%" border="1" >
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{this.rollno}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.dob}}</td>
+                <td>{{this.email}}</td>
+                <td>
+                    <a href="edit/{{this.rollno}}">edit</a>
+                    <a href="delete/{{this.rollno}}">delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
